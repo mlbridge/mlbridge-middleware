@@ -39,6 +39,7 @@ Elasticsearch server and then run the `middleware.py` app:
 cd mlbridge-ui/mlbridge_middleware/src
 python3 ui.py
 ```
+
 ## Features
 
 The middleware is a Python Flask Server that receives the request along with 
