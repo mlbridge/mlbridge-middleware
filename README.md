@@ -101,7 +101,7 @@ trained using batch gradient descent with the Adam optimizer.
 
 ### TensorFlow Model
 
-#### Tensorflow Model Definition
+#### TensorFlow Model Definition
 
 The pre-trained deep learning model is a Convolutional Neural Net whose input is
 a (16, 16, 1) shaped array and the output is a single value lying in between 0 
