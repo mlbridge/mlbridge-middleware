@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 from datetime import datetime
 from elasticsearch import Elasticsearch
-from .dns_monitoring_server import *
+from mlbridge_middleware.src.middleware import *
 
 
 class TestDNSMonitoringServer(unittest.TestCase):
