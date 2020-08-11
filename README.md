@@ -1,4 +1,9 @@
 # MLBridge-Middleware
+[![Build Status](https://travis-ci.org/mlbridge/mlbridge-middleware.svg?branch=master)](https://travis-ci.org/mlbridge/mlbridge-middleware)
+[![codecov](https://codecov.io/gh/mlbridge/mlbridge-middleware/branch/master/graph/badge.svg)](https://codecov.io/gh/mlbridge/mlbridge-middleware)
+
+
+
 
 This repository contains the middleware for the MLBridge project, which allows
 the user to provide machine learning capabilities to languages and platforms 
