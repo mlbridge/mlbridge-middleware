@@ -89,6 +89,44 @@ The dataset was split as follows:
 Training: The deep-learning model is a Convolutional Neural Net that is 
 trained using batch gradient descent with the Adam optimizer.
 
+### TensorFlow Model
+
+#### Tensorflow Model Definition
+
+The pre-trained deep learning model is a Convolutional Neural Net whose input is
+a (16, 16, 1) shaped array and the output is a single value lying in between 0 
+and 1. If the output value is less than 0.5 the domain name is considered benign
+, else it is considered malicious. 
+
+The model summary can be found below:
+
+
+| Layer      | Output Shape          | Activation   | Number of Parameters |
+|:----------:|:---------------------:|:------------:|:--------------------:|
+| Input      | (None, 16, 16, 1 )    | -            |0                     |
+| Conv2D     | (None, 15, 15, 16)    | Relu         |80                    |
+| MaxPooling | (None, 7, 7, 16)      | -            |0                     |
+| Conv2D     | (None, 6, 6, 16)      | Relu         |1040                  |
+| MaxPooling | (None, 3, 3, 16)      | -            |0                     |
+| Conv2D     | (None, 2, 2, 8 )      | Relu         |520                   |
+| Flatten    | (None, 32)            | -            |0                     |
+| Dense      | (None, 8 )            | Relu         |264                   |
+| Dense      | (None, 1 )            | Sigmoid      |9                     |
+
+#### TensorFlow Model Visualization
+
+The model can be visualized as follows: 
+
+![image info](./readme-assets/model_.png)
+
+#### Results
+
+The accuracy for the Train Set, Validation Set and Test Set is as follows:
+
+| Metric   | Train Set   | Validation Set | Test Set |  
+|----------|-------------|----------------|----------|
+| Accuracy | 99.25 %     | 98.00 %        | 98.00 %  |
+
 
 
 
