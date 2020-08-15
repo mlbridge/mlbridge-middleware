@@ -1,4 +1,4 @@
-# MLBridge-Middleware
+# ML Bridge - Middleware
 [![Build Status](https://travis-ci.org/mlbridge/mlbridge-middleware.svg?branch=master)](https://travis-ci.org/mlbridge/mlbridge-middleware)
 [![codecov](https://codecov.io/gh/mlbridge/mlbridge-middleware/branch/master/graph/badge.svg)](https://codecov.io/gh/mlbridge/mlbridge-middleware)
 [![GitHub issues](https://img.shields.io/github/issues/mlbridge/mlbridge-middleware)](https://github.com/mlbridge/mlbridge-middleware/issues)
@@ -36,8 +36,8 @@ Install Elasticsearch by following the instructions from this
 [link](https://phoenixnap.com/kb/install-elasticsearch-ubuntu). Start the 
 Elasticsearch server and then run the `middleware.py` app:
 ```
-cd mlbridge-ui/mlbridge_middleware/src
-python3 ui.py
+cd mlbridge-middleware/mlbridge_middleware/src
+python middleware.py
 ```
 
 ## Features
