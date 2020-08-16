@@ -143,7 +143,7 @@ def server():
     es = Elasticsearch()
 
     model = models.load_model(
-        'C:\Chanakya\Projects\coredns_dns_ml_firewall\Code\Jupyter Notebooks\saved_models\dns_alert_model.hdf5')
+        '../../../mlbridge-machine-learning/saved_models/dns_alert_model.hdf5')
 
     mal_and_benign_list_creation(es)
     vetted_list_creation(es)
