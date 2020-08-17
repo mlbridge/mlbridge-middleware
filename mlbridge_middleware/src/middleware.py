@@ -11,6 +11,18 @@ app = Flask(__name__)
 
 
 def string_to_ascii(string):
+    """
+
+    Function that converts the domain name to an integer array of ASCII values.
+
+    Args:
+        string: Contains the Domain Name entered by the user.
+
+    Returns:
+        A numpy array of ASCII values corresponding to the characters of the
+        Domain Name
+
+    """
     ascii_arr = np.zeros(len(string))
     for i in range(len(string)):
         ascii_arr[i] = ord(string[i])
@@ -18,6 +30,17 @@ def string_to_ascii(string):
 
 
 def mal_and_benign_list_creation(es):
+    """
+
+    Function that creates an empty list for malicious and benign domains.
+
+    Args:
+        es: Contains the Elasticsearch object.
+
+    Returns:
+        Not applicable.
+
+    """
     if ('mal' not in es.indices.get('*')) and \
             ('benign' not in es.indices.get('*')):
         es.index(index='mal', id=1, body={})
@@ -25,6 +48,18 @@ def mal_and_benign_list_creation(es):
 
 
 def vetted_list_creation(es):
+    """
+
+    Function that creates an empty list for not vetted, benign, honeypot and
+    malicious domains.
+
+    Args:
+        es: Contains the Elasticsearch object.
+
+    Returns:
+        Not applicable.
+
+    """
     if ('not_vetted' not in es.indices.get('*')) and \
             ('benign_vet' not in es.indices.get('*')) and \
             ('honeypot' not in es.indices.get('*')) and \
