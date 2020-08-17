@@ -82,7 +82,7 @@ def list_updation(es, domain_name, send):
         domain_name: Contains the domain name corresponding to which the list
                      will be updated.
         send: Contains the model prediction score whether the domain is
-              malicious or benign. 
+              malicious or benign.
 
     Returns:
         Not Applicable
@@ -141,6 +141,28 @@ def list_updation(es, domain_name, send):
 
 
 def update_historical_analysis(es, domain_name, ip, send, date_time):
+
+    """
+
+    Function that updates the date and time at which a particular domain is
+    queried along with the IP address of the machine that queries that
+    particular domain. Moreover, the model confidence score regarding whether
+    the domain is malicious or not is also updated.
+
+    Args:
+        es: Contains the Elasticsearch object.
+        domain_name: Contains the domain name corresponding to which the list
+                     will be updated.
+        ip: Contains the IP address of the machine querying that domain.
+        send: Contains the model prediction score whether the domain is
+              malicious or benign.
+        date_time: Contains the date as well as the time the request is
+                   processed.
+
+    Returns:
+        Not applicable.
+
+    """
 
     date = str(date_time.date())
     year = str(date_time.date().year)
