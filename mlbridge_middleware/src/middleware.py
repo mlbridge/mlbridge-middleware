@@ -221,10 +221,9 @@ def server():
 
     Returns:
         A JSON message that contains the confidence score regarding whether the
-        request is of a malicious or a benign domain. 
+        request is of a malicious or a benign domain.
 
     """
-
 
     es = Elasticsearch()
 
