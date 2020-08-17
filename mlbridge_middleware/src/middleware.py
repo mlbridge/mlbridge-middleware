@@ -23,6 +23,7 @@ def string_to_ascii(string):
         Domain Name
 
     """
+
     ascii_arr = np.zeros(len(string))
     for i in range(len(string)):
         ascii_arr[i] = ord(string[i])
