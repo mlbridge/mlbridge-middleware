@@ -141,7 +141,6 @@ def list_updation(es, domain_name, send):
 
 
 def update_historical_analysis(es, domain_name, ip, send, date_time):
-
     """
 
     Function that updates the date and time at which a particular domain is
@@ -214,6 +213,19 @@ def update_historical_analysis(es, domain_name, ip, send, date_time):
 
 @app.route('/', methods=['GET', 'POST'])
 def server():
+    """
+
+    Function that processes the request and then sends back a JSON message via
+    the hyper text transfer protocol to the ML Bridge Plugin that contains the
+    confidence score regarding whether the domain is malicious or benign.
+
+    Returns:
+        A JSON message that contains the confidence score regarding whether the
+        request is of a malicious or a benign domain. 
+
+    """
+
+
     es = Elasticsearch()
 
     model = models.load_model(
