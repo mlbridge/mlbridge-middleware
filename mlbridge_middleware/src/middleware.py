@@ -71,6 +71,23 @@ def vetted_list_creation(es):
 
 
 def list_updation(es, domain_name, send):
+    """
+
+    Function that updates the updates the malicious and benign lists depending
+    on how many people have queried that particular domain and also the model
+    confidence score regarding whether the domain is malicious or not.
+
+    Args:
+        es: Contains the Elasticsearch object.
+        domain_name: Contains the domain name corresponding to which the list
+                     will be updated.
+        send: Contains the model prediction score whether the domain is
+              malicious or benign. 
+
+    Returns:
+        Not Applicable
+
+    """
 
     body_not_vetted = es.get(index='not_vetted', id=1)['_source']
 
